@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfare. Team Portal</title>
+    <style>
+        /* --- RESET & BASIC SETUP --- */
+        body {
+            margin: 0;
+            padding: 0;
+            /* Background: A warm abstract red/orange wallpaper */
+            background: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* RED THEME LINK COLORS */
+        a {
+            text-decoration: none;
+            color: #b30000;
+        }
+
+            a:hover {
+                text-decoration: underline;
+                color: #ff3333;
+            }
+
+        /* --- LAYOUT CONTAINER --- */
+        .container {
+            width: 960px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.96); /* Slightly more opaque */
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(50, 0, 0, 0.6); /* Reddish shadow */
+            border: 1px solid #fff;
+            overflow: hidden;
+            min-height: 800px;
+        }
+
+        /* --- HEADER (The RED Aero Gloss) --- */
+        header {
+            /* GLOSSY RED GRADIENT */
+            background: linear-gradient(to bottom, #D31027 0%, #EA384D 100%);
+            padding: 20px 30px;
+            border-bottom: 4px solid #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+            header::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 50%;
+                background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.05) 100%);
+                pointer-events: none;
+            }
+
+        h1.logo {
+            font-size: 48px;
+            color: #fff;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            font-weight: bold;
+            font-style: italic;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            color: #ffcccc; /* Light pink text */
+            font-size: 14px;
+            margin-top: -5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            border-bottom: 1px solid #cc9999;
+            padding: 10px 30px;
+            background: linear-gradient(to bottom, #ffffff 0%, #f2dcdc 100%); /* Slight reddish tint */
+        }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            nav li {
+                display: inline;
+                margin-right: 20px;
+            }
+
+            nav a {
+                color: #8a2be2; /* Deep purple/red contrast */
+                color: #800000;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+
+        /* --- COLUMNS --- */
+        .main-content {
+            display: flex;
+        }
+
+        /* --- SIDEBAR (Left) --- */
+        aside {
+            width: 280px;
+            padding: 20px;
+            background-color: #fff5f5; /* Very light red */
+            border-right: 1px solid #f0caca;
+        }
+
+        .sidebar-module {
+            margin-bottom: 25px;
+            background: #fff;
+            border: 1px solid #e6b3b3;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+            .sidebar-module h3 {
+                margin-top: 0;
+                color: #b30000; /* Dark Red */
+                font-size: 16px;
+                border-bottom: 1px dotted #d98c8c;
+                padding-bottom: 5px;
+            }
+
+        /* Project Status Styling */
+        .project-status {
+            font-size: 13px;
+            margin-bottom: 8px;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #eee;
+            background: #fffafa;
+        }
+
+            .project-status strong {
+                display: block;
+                color: #333;
+            }
+
+        .status-active {
+            border-left: 4px solid #D31027;
+        }
+        /* Red Active Bar */
+        .status-killed {
+            border-left: 4px solid #999;
+            opacity: 0.7;
+        }
+
+        .killed-badge {
+            background: #666;
+            color: white;
+            font-size: 10px;
+            padding: 1px 4px;
+            border-radius: 3px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        /* --- BLOG AREA (Right) --- */
+        main {
+            flex: 1;
+            padding: 25px;
+        }
+
+        article.post {
+            margin-bottom: 30px;
+            border-bottom: 1px dashed #d98c8c;
+            padding-bottom: 20px;
+        }
+
+        .post-header {
+            background: #fff0f0; /* Light pink/red bg */
+            padding: 10px;
+            border: 1px solid #f0caca;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .post-title {
+            margin: 0;
+            font-size: 22px;
+            color: #990000;
+        }
+
+        .post-meta {
+            font-size: 11px;
+            color: #885555;
+            margin-top: 2px;
+        }
+
+        .post-body {
+            font-size: 14px;
+        }
+
+        .version-tag {
+            background: linear-gradient(to bottom, #ffeb3b 0%, #fdd835 100%);
+            border: 1px solid #c6a700;
+            padding: 2px 6px;
+            font-size: 11px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 5px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            border-top: 4px solid #D31027; /* Matching Red Top Border */
+        }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+        /* --- UTILS --- */
+        .glossy-btn {
+            display: inline-block;
+            background: linear-gradient(to bottom, #f2f2f2 0%, #d4d4d4 100%);
+            border: 1px solid #aaa;
+            padding: 5px 15px;
+            border-radius: 15px;
+            color: #333;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+            .glossy-btn:hover {
+                background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+                text-decoration: none;
+                color: #b30000;
+            }
+
+        /* Loading state */
+        .loading {
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="logo">Fanfare Team.</h1>
+            <div class="tagline">Constructing digital noise since 2024.</div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects (BROKEN LINK)</a></li>
+                <li><a href="#">About (BROKEN LINK)</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <aside>
+                <div class="sidebar-module">
+                    <h3>About Fanfare.</h3>
+                    <p style="font-size: 12px;">We are a small team building tools for the modern web. We like music and words.</p>
+                </div>
+
+                <div class="sidebar-module">
+                    <h3>Current Projects</h3>
+                    <div id="project-list" class="loading">Loading projects...</div>
+                </div>
+            </aside>
+
+            <main>
+                <h2 style="border-bottom: 2px solid #e6b3b3; padding-bottom: 10px; color: #800000;">Latest Updates & Patch Notes</h2>
+
+                <div id="blog-feed" class="loading">
+                    Fetching updates from server...
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <marquee scrollamount="5" width="400">Welcome to Fanfare. | Red Edition v2.0 | Updates every week!</marquee>
+            <p>&copy; 2009-2025 Fanfare Team.</p>
+        </footer>
+    </div>
+
+    <script>
+        // File path to your JSON
+        const JSON_URL = 'data.json';
+
+        async function loadContent() {
+            try {
+                const response = await fetch(JSON_URL);
+                if (!response.ok) throw new Error("Failed to load data");
+
+                const data = await response.json();
+
+                renderProjects(data.projects);
+                renderPosts(data.posts);
+
+            } catch (error) {
+                console.error(error);
+                document.getElementById('blog-feed').innerHTML = '<p style="color:red">Error loading content. If you are opening this file directly on your computer, you need to use a Local Server (like VS Code Live Server) because browsers block local JSON fetches for security.</p>';
+            }
+        }
+
+        function renderProjects(projects) {
+            const container = document.getElementById('project-list');
+            container.innerHTML = ''; // Clear loading text
+            container.classList.remove('loading');
+
+            projects.forEach(proj => {
+                // Determine styling based on status
+                const isKilled = proj.status === 'killed';
+                const statusClass = isKilled ? 'status-killed' : 'status-active';
+                const killedBadge = isKilled ? '<span class="killed-badge">R.I.P.</span>' : '';
+
+                const html = `
+                    <div class="project-status ${statusClass}">
+                        <strong>${proj.icon} ${proj.name} ${killedBadge}</strong>
+                        <span style="font-size: 11px; color: #666;">${proj.description}</span><br>
+                        <a href="${proj.link || '#'}" style="font-size: 11px;">${proj.linkText}</a>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        function renderPosts(posts) {
+            const container = document.getElementById('blog-feed');
+            container.innerHTML = '';
+            container.classList.remove('loading');
+
+            posts.forEach(post => {
+                const versionHtml = post.version ? `<span class="version-tag">${post.version}</span>` : '';
+
+                const html = `
+                    <article class="post">
+                        <div class="post-header">
+                            <h3 class="post-title">${post.title}</h3>
+                            <div class="post-meta">Posted on ${post.date} | Filed under: <a href="#">${post.category}</a></div>
+                        </div>
+                        <div class="post-body">
+                            ${post.content}
+                            ${versionHtml}
+                        </div>
+                    </article>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        // Run the function when page loads
+        loadContent();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿{
+  "projects": [
+    {
+      "name": "Project Cele",
+      "description": "Simple Music Player",
+      "link": "cele.html",
+      "linkText": "Check out Patch 2!",
+      "status": "active",
+      "icon": "🎵"
+    },
+    {
+      "name": "Project Writer",
+      "description": "Distraction-free text",
+      "link": "writer.html",
+      "linkText": "Download v0.6",
+      "status": "active",
+      "icon": "📝"
+    },
+    {
+      "name": "Project Spot!",
+      "description": "Social Hub for Developers (2024-2024)",
+      "link": "",
+      "linkText": "Servers offline",
+      "status": "killed",
+      "icon": "🕸️"
+    }
+  ],
+  "posts": [
+
+    {
+      "title": "New Project in Work...",
+      "date":"December 25, 2025",
+      "category": "Announcements",
+      "content": "<p>We are happy to announce that we're working on a WinRT Universal version of Project Cele - currently under name of 'Project Timeout'. It will go active developent right when we will finish development for Update 2 of Cele. For now planned features are: .m4a/.flac/.aac support at start, videos for Now Playing Screen, Now Playing Screen in full mode and more.</p><p>Stay tuned!</p>"
+    },
+    {
+      "title": "Welcome to the Red Era",
+      "date": "December 24, 2025",
+      "category": "Site Update",
+      "version": "v3.0",
+      "content": "<p>We decided to change the paint job. Blue is so 2007. Red is the future. This update also introduces a new JSON-based engine for our blog, meaning updates will come much faster.</p><p>Check out the sidebar for the status of our apps.</p>"
+    },
+    {
+      "title": "Project Cele: Patch 2 Update",
+      "date": "December 23, 2025",
+      "category": "Releases",
+      "version": "v1.6.0",
+      "content": "<p>Added many small features that you'll like! <b>Changelog:</b></p><ul><li>Added 'Smol Cele' mode</li><li>Added Keyboard Shortcuts</li><li>Added Search in All Tracks tab</li><li>Fixed album tracklist not clearing when switching tabs</li><li>Fixed info panels covering track lists</li><li>Replaced emoji symbols with proper Unicode text ONE LAST TIME</li></ul><p>Download via the link in the sidebar!</p>"
+    },
+    {
+      "title": "Farewell to Project Spot!",
+      "date": "November 01, 2024",
+      "category": "Announcements",
+      "content": "<p>It is with a heavy heart that we announce the closure of <b>Project Spot!</b>. The servers are officially offline. Thank you for the memories.</p>"
+    },
+    {
+      "title": "Migrating to Spot!",
+      "date": "June 21, 2024",
+      "category": "Announcements",
+      "content":"<p>Now all of the news from vertigo will be available on Spot! @ vertigo!</p><p>We are waiting for You!</p>"
+    },
+    {
+      "title": "Hi Spot!",
+      "date": "June 18, 2024",
+      "category": "Announcements",
+      "content": "<p>Big congratulations on Project Spot finally releasing! You can follow us on Spot! @ vertigo. We have SO MUCH to share with y'all like a Desktop App (which is currently already in work...), Several Communities at One Time, Video Support and many more!</p><p>Thanks for believing in us!</p>"
+    },
+    {
+      "title": "oopsie",
+      "date": "June 4, 2024",
+      "category": "default",
+      "content":"<p>i acidentally deleted all old posts when updating site =(</p><p>P.S. you can still see old posts on Project Spot: Preview! - vertigoteam</p>"
+    }
+  ]
+}
