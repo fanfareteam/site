@@ -19,7 +19,7 @@
     {
       "name": "Project Spot!",
       "description": "Social Hub for Developers (2024-2024)",
-      "link": "",
+      "link": "spot.html",
       "linkText": "Servers offline",
       "status": "killed",
       "icon": "🕸️"
@@ -72,4 +72,5 @@
       "content":"<p>i acidentally deleted all old posts when updating site =(</p><p>P.S. you can still see old posts on Project Spot: Preview! - vertigoteam</p>"
     }
   ]
+
 }
