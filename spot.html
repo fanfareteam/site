@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Spot! - Offline</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            /* A darker, sunset version of the red theme */
+            background: linear-gradient(135deg, #4b0000 0%, #b30000 100%);
+            font-family: "Tahoma", sans-serif;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .memorial-container {
+            width: 600px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px); /* Modern touch but fits the 'glass' aero vibe */
+        }
+
+        .icon-dead {
+            font-size: 100px;
+            filter: grayscale(100%);
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .date-range {
+            font-size: 14px;
+            color: #ffcccc;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .links a {
+            color: #fff;
+            text-decoration: underline;
+            font-size: 13px;
+            margin: 0 10px;
+            opacity: 0.8;
+        }
+
+        .links a:hover { opacity: 1; }
+
+        .footer-note {
+            margin-top: 40px;
+            font-size: 10px;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="memorial-container">
+        <div class="icon-dead">🕸️</div>
+        <h1>Project Spot!</h1>
+        <span class="date-range">October 2023 &mdash; November 2024</span>
+
+        <div class="message">
+            The servers for Project Spot! have been permanently decommissioned. 
+            <br><br>
+            We want to thank the users who shared their "spots" and made this hub a vibrant community for four years. Due to shifting priorities and the rising costs of infrastructure, Fanfare. has decided to sunset the project to focus on <b>Cele</b> and <b>Writer</b>.
+        </div>
+
+        <div class="links">
+            <a href="index.html">Return to Portal</a>
+            <a href="#">Export Your Data (Closed)</a>
+        </div>
+
+        <div class="footer-note">
+            Error Code: 410 - GONE | Fanfare Archive Division
+        </div>
+    </div>
+
+</body>
+</html>

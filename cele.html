@@ -39,25 +39,35 @@
         }
 
         .download-zone {
-            margin-top: 30px; padding: 20px;
+            margin-top: 30px; padding: 30px;
             background: #f2f2f2; border-radius: 10px;
+            border: 1px inset #fff;
         }
+        
+        .dl-group { margin-bottom: 25px; }
+        .dl-group h3 { font-size: 18px; margin-bottom: 10px; color: #b30000; }
+
         .btn {
-            display: inline-block; padding: 12px 25px; margin: 10px;
+            display: inline-block; padding: 12px 25px; margin: 5px;
             border-radius: 25px; font-weight: bold; color: white;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
             border: 2px solid #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            text-decoration: none;
+            min-width: 180px;
         }
         .btn-main { background: linear-gradient(to bottom, #44cc44 0%, #228822 100%); }
-        .btn-beta { background: linear-gradient(to bottom, #888 0%, #444 100%); }
+        .btn-stable { background: linear-gradient(to bottom, #cf1b1b 0%, #800000 100%); }
         .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
         
+        .arch-label { display: block; font-size: 11px; color: #666; margin-top: 4px; font-weight: bold; }
+
         .warning-tape {
-            background: #ffeb3b; color: #333; padding: 5px;
+            background: #ffeb3b; color: #333; padding: 8px;
             font-size: 11px; font-weight: bold; margin-top: 20px;
             border: 1px dashed #c6a700;
         }
-        nav { padding: 10px; background: #eee; text-align: left; }
+        nav { padding: 10px; background: #eee; text-align: left; border-bottom: 1px solid #ccc; }
+        nav a { color: #b30000; text-decoration: none; font-weight: bold; font-size: 13px; }
     </style>
 </head>
 <body>
@@ -75,8 +85,25 @@
             </div>
 
             <div class="download-zone">
-                <a href="#" class="btn btn-main">Download (v1.6.0)</a>
-                <a href="#" class="btn btn-beta">Download Beta (v1.5.2)</a>
+                <div class="dl-group">
+                    <h3>Latest Release (v1.6.0)</h3>
+                    <a href="https://github.com/fanfareteam/cele/releases/download/PreferismP2Beta/Beta_x86.7z" class="btn btn-main">Download Beta</a>
+                    <span class="arch-label">Architecture: x32 (Only)</span>
+                </div>
+
+                <hr style="border: 0; border-top: 1px dotted #ccc; margin: 20px 0;">
+
+                <div class="dl-group">
+                    <h3>Stable Release (v1.5.1)</h3>
+                    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                        <div>
+                            <a href="https://github.com/fanfareteam/cele/releases/download/PreferismP1.5/Stable_x86.7z" class="btn btn-stable">Download x32</a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/fanfareteam/cele/releases/download/PreferismP1.5/Stable_x64.7z" class="btn btn-stable">Download x64</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="warning-tape">

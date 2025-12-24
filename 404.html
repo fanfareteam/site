@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            background: #E2E2E2; /* Classic Windows background grey */
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .aero-window {
+            width: 550px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #777;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* The "Glass" Title Bar */
+        .title-bar {
+            background: linear-gradient(to bottom, #D31027 0%, #800000 100%);
+            padding: 8px 15px;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        .content {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .error-icon {
+            float: left;
+            margin-right: 20px;
+            font-size: 50px;
+            color: #D31027;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #003399; /* Classic IE link blue */
+            margin: 0 0 15px 0;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 13px;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .suggested-actions {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        .suggested-actions li {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+            text-align: right;
+        }
+
+        .btn-fix {
+            background: linear-gradient(to bottom, #f2f2f2 0%, #d4d4d4 100%);
+            border: 1px solid #888;
+            padding: 5px 20px;
+            border-radius: 3px;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="aero-window">
+        <div class="title-bar">
+            <span>Fanfare. Explorer</span>
+            <span style="font-family: sans-serif; opacity: 0.8;">&times;</span>
+        </div>
+        
+        <div class="content">
+            <div class="error-icon">⚠</div>
+            <h1>The webpage cannot be found</h1>
+            
+            <p>Most likely causes:</p>
+            <ul class="suggested-actions">
+                <li>There might be a typing error in the address.</li>
+                <li>If you clicked on a link, it may be out of date (like Project Spot!).</li>
+            </ul>
+
+            <p>What you can try:</p>
+            <ul class="suggested-actions">
+                <li><a href="javascript:history.back()">Go back to the previous page.</a></li>
+                <li><a href="index.html">Return to the Fanfare. Portal home.</a></li>
+            </ul>
+
+            <div class="footer">
+                <a href="index.html" class="btn-fix">Diagnose Connection...</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -38,16 +38,24 @@
             padding: 30px; border: 1px double #ccc; text-align: center;
         }
         .dl-button {
+            display: inline-block;
             background: linear-gradient(to bottom, #fff 0%, #ccc 100%);
             border: 1px solid #777; padding: 15px 40px;
             font-size: 18px; font-weight: bold; cursor: pointer;
             border-radius: 3px; color: #00b3a4;
+            text-decoration: none;
         }
-        .dl-button:hover { background: #fff; border-color: #00a7b3; }
+        .dl-button:hover { background: #fff; border-color: #00a7b3; text-decoration: none; }
 
         .sys-req {
             font-size: 11px; color: #666; margin-top: 15px;
             text-transform: uppercase; letter-spacing: 1px;
+        }
+        
+        .badge-row { margin-top: 10px; }
+        .badge {
+            background: #10d3c3; color: white; padding: 2px 8px; 
+            font-size: 10px; border-radius: 3px; font-weight: bold;
         }
     </style>
 </head>
@@ -55,7 +63,7 @@
     <div class="container">
         <div class="nav-strip"><a href="index.html" style="color:#00b39b;">Home</a> &gt; Projects &gt; Project Writer</div>
         <header>
-            <h1 style="margin:0; letter-spacing: 2px;">Project Writer 0.6</h1>
+            <h1 style="margin:0; letter-spacing: 2px;">Project Writer 0.6.1</h1>
             <span style="font-size: 12px; opacity: 0.8;">"Glasswave." Edition</span>
         </header>
         
@@ -71,7 +79,12 @@
             </div>
 
             <div class="dl-section">
-                <button class="dl-button" onclick="alert('Starting Download...')">Download (v0.6)</button>
+                <a href="https://github.com/fanfareteam/writer/releases/download/0.6.1/Release_x86.7z" class="dl-button">Download (v0.6.1)</a>
+                
+                <div class="badge-row">
+                    <span class="badge">x86 & x64 Supported</span>
+                </div>
+
                 <div class="sys-req">Requirements: Windows XP SP3 or newer | 512MB RAM RECOMMENDED</div>
             </div>
         </div>
